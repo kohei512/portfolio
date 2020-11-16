@@ -1,0 +1,252 @@
+/*ナビゲーション*/
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  z-index: 1;
+}
+.title {
+  margin-left: 20px;
+  width: 70%;
+  font-size: 2rem;
+}
+.navigationBar {
+  float: right;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+  color: black;
+  font-size: 2.5vw;
+}
+.nav {
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+/*背景イメージ*/
+.top-image {
+  position: relative;
+  overflow: hidden;
+}
+.top-image p {
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  margin: 0;
+  padding: 0;
+  font-size: 6vw;
+  width: 100%;
+}
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.section-title {
+  padding-top: 50px;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/*About*/
+body {
+  width: 100%;
+}
+.profile {
+  display: flex;
+  padding: 50px;
+}
+.profile-icon {
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.profile-icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  height: 100%;
+}
+.profile-text {
+  margin-left: 70px;
+  width: 100%;
+}
+
+/*Skill*/
+.skills {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.skill {
+  margin: 20px;
+}
+
+/*Portfolio*/
+.portfolios {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+.portfolio {
+  margin: 20px auto;
+  width: 20rem;
+  max-width: 400px;
+  position: relative;
+  padding: 0px 10px;
+}
+.portfolio-image {
+  width: 100%;
+  height: 300px;
+}
+.portfolio-title {
+  font-size: 20px;
+}
+
+/*Contact*/
+.contact {
+  padding: 50px;
+  margin-top: 50px;
+}
+
+.image-email {
+  width: 50px;
+  margin-top: 30px;
+}
+
+.space {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 940px) {
+  .nav {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  /*Profile*/
+  .top-image p {
+    font-size: 8vw;
+    left: 23%;
+  }
+  .iconbox {
+    margin: 0 auto;
+  }
+  .profile {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .profile-icon {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .profile-text {
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+
+  /*Navigation*/
+  .header {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 1.7rem;
+    margin-left: 10px;
+    width: 100%;
+    line-height: 50px;
+  }
+  .toggle {
+    position: fixed;
+    top: 6px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1;
+    border-color: transparent;
+  }
+  .toggle:before {
+    content: "+";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+  .toggle.active:before {
+    transform: rotate(135deg);
+    border-color: transparent;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.941);
+    transition: transform 0.5s;
+  }
+  .overlay.active {
+    transform: scale(100, 100);
+  }
+  .navigationBar {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+  }
+  .navigationBar.active {
+    visibility: visible;
+    transition-delay: 0.2s;
+  }
+  .navigationBar ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .navigationBar ul a {
+    position: relative;
+    font-size: 2rem;
+    margin: 10px auto;
+    display: block;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .navigationBar ul a:hover {
+    color: rgb(165, 164, 164);
+  }
+}

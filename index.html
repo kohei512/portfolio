@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Kohei's portfolio</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    
+    <link rel="stylesheet" href="reset.css" class="stylesheet" />
+    <link rel="stylesheet" href="style.css" class="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <div class="header">
+        <div class="title">
+          <a href="index.html#top-image"> Kohei's portfolio </a>
+        </div>
+        <div class="overlay"></div>
+        <div class="toggle"></div>
+        <div class="navigationBar">
+          <ul>
+            <a class="nav" href="index.html#about">About</a>
+            <a class="nav" href="index.html#skill">Skills</a>
+            <a class="nav" href="index.html#portfilio">Portfolio</a>
+            <a class="nav" href="index.html#contact">Contact</a>
+          </ul>
+        </div>
+      </div>
+      <div class="top-image" id="top-image">
+        <img src="img/top.jpg" width="100%" class="image" alt="top-image" />
+        <p>Kohei's portfolio</p>
+      </div>
+      <div class="contents">
+        <section id="about">
+          <div class="section-title">About</div>
+          <div class="profile">
+            <div class="iconbox">
+              <div class="profile-icon">
+                <img src="img/top2.jpg" alt="top-image" />
+              </div>
+            </div>
+            <div class="profile-text">
+              <p>土井　康平 （どい こうへい）</p>
+              <div class="space">
+                <p>1991年2月12日生まれ/ 29歳</p>
+              </div>
+              <div class="space">
+                <p>2020年3月からHTML、CSS、JavaScriptを勉強し始める。</p>
+              </div>
+              <div class="space">
+                <p>自分で勉強していくうちにもっと開発をしたい！！Webに携わりたい！！と</p>
+              </div>
+              <div class="space">
+                <p>いつしかテックサイドに興味を持ち始めました。</p>
+              </div>
+              <div class="space">
+                <p>
+                  エンジニアになって自分が作った物を多くの人に使ってもらいたいと感じました。
+                </p>
+              </div>
+              <div class="space">
+                <p>
+                  フロントエンドエンジニアを目指しており、もっといろんな技術を学んでいきたいと思っています。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skill">
+          <div class="section-title">Skills</div>
+          <div class="skills">
+            <div class="skill">
+              <p>HTML</p>
+            </div>
+            <div class="skill">
+              <p>CSS</p>
+            </div>
+            <div class="skill">
+              <p>Java Script</p>
+            </div>
+            <div class="skill">
+              <p>Jquery</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfilio">
+          <div class="section-title">Portfolio</div>
+          <div class="portfolios">
+            <a href="index.html#top-image"  class="portfolio">
+              <div class="portfolio-image">
+                <img src="img/top3.png" alt="portfilio" width="100%" />
+              </div>
+              <p class="portfolio-title">Portfolio Site</p>
+              <p>このポートフォリオサイトです。</p>
+            </a>
+          </div>
+        </section>
+        <section id="contact">
+          <div class="section-title">Contact</div>
+          <img src="img/top4.png" class="image-email" alt="email">
+          <p>cae35246@gmail.com</p><br>
+          <p>お気軽にご連絡頂ければ幸いです。</p><br>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".toggle").on("click", function () {
+          $(".toggle").toggleClass("active");
+          $(".overlay").toggleClass("active");
+          $(".navigationBar").toggleClass("active");
+        });
+        $(".nav").on("click", function () {
+          $(".toggle").toggleClass("active");
+          $(".overlay").toggleClass("active");
+          $(".navigationBar").toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
